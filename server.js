@@ -5,10 +5,10 @@ const app = express();
 const http = require("http").createServer(app);
 const io = require("socket.io")(http);
 
-mongoose.connect("mongodb://127.0.0.1:27017/omegle", {
+mongoose.connect('your_mongo_atlas_connection_string_here', {
   useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+  useUnifiedTopology: true
+})
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
